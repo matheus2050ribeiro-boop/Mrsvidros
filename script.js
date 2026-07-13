@@ -45,7 +45,7 @@ const PRODUCTS = [
   {
     id: "abrigo", tag: "Abrigo para pia", title: "Abrigo para Pia",
     desc: "Proteção em vidro para a área da pia, evitando respingos e mantendo o ambiente sempre limpo.",
-    features: ["Frontal, lateral ou em L", "Vidro incolor, fumê ou jateado", "Fixação com botão ou colado"],
+    features: ["Frontal, lateral ou em L", "Vidro incolor, fumê ou jateado", "Fixação com  Silicone"],
     images: ["imagens/espelho-1.jpg","imagens/espelho-2.jpg","imagens/espelho-3.jpg"],
   },
 ];
