@@ -1,4 +1,5 @@
 User-agent: *
+
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://mrsvidros.com.br/sitemap.xml
