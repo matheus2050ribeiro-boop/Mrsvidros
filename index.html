@@ -3,15 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MRS Vidros — Vidros, Espelhos e Esquadrias sob Medida</title>
-  <meta name="description" content="MRS Vidros: box, espelhos, guarda-corpo, janelas, portas, sacadas e abrigo para pia em vidro e alumínio. Projetos sob medida com instalação especializada." />
+  <meta name="theme-color" content="#050709" />
+  <title>MRS Vidros — Vidros, Espelhos e Esquadrias sob Medida em SP</title>
+  <meta name="description" content="MRS Vidros: box de banheiro, espelhos, guarda-corpo, fachadas, sacadas, coberturas, janelas, portas e abrigo para pia. Vidro temperado e alumínio sob medida em São Paulo e Grande SP." />
+  <link rel="canonical" href="/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MRS Vidros — Vidros e Esquadrias sob Medida" />
+  <meta property="og:description" content="Box, espelhos, guarda-corpo, fachadas, sacadas, coberturas, janelas, portas e abrigo para pia. Vidro temperado e alumínio sob medida em SP." />
+  <meta property="og:image" content="imagens/hero.jpg" />
+  <meta property="og:site_name" content="MRS Vidros" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MRS Vidros — Vidros e Esquadrias sob Medida" />
+  <meta name="twitter:description" content="Vidro temperado e alumínio sob medida em São Paulo." />
+  <meta name="twitter:image" content="imagens/hero.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://mrsvidros.com.br/#business",
+    "name": "MRS Vidros",
+    "image": "imagens/hero.jpg",
+    "description": "Vidraçaria especializada em vidros temperados, espelhos e esquadrias de alumínio sob medida.",
+    "url": "https://mrsvidros.com.br/",
+    "telephone": "+5511981303415",
+    "priceRange": "$$",
+    "areaServed": [{"@type":"City","name":"São Paulo"},{"@type":"AdministrativeArea","name":"Grande São Paulo"}],
+    "address": {"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},
+    "openingHoursSpecification": [{
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens":"08:00","closes":"18:00"
+    }],
+    "sameAs": ["https://www.instagram.com/vidracariamrsvidros/"]
+  }
+  </script>
 </head>
 <body>
-  <!-- SVG logo reutilizável (dois vidros em L, referência à placa da MRS) -->
+  <!-- SVG logo reutilizável -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="lg-glass-a" x1="0" y1="0" x2="1" y2="1">
@@ -23,11 +62,8 @@
         <stop offset="1" stop-color="#84e6dc" stop-opacity=".45"/>
       </linearGradient>
       <symbol id="mrs-mark" viewBox="0 0 64 64">
-        <!-- vidro esquerdo -->
         <path d="M14 8 L30 10 L30 56 L14 54 Z" fill="url(#lg-glass-a)" stroke="rgba(255,255,255,.55)" stroke-width="1"/>
-        <!-- vidro direito (inclinado, formando L) -->
         <path d="M34 10 L50 6 L50 52 L34 56 Z" fill="url(#lg-glass-b)" stroke="rgba(255,255,255,.55)" stroke-width="1"/>
-        <!-- reflexos -->
         <path d="M17 14 L20 14 L20 50" stroke="rgba(255,255,255,.35)" stroke-width="1" fill="none"/>
         <path d="M45 12 L47 12 L47 48" stroke="rgba(255,255,255,.35)" stroke-width="1" fill="none"/>
       </symbol>
@@ -37,26 +73,34 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="nav glass">
-      <a href="#inicio" class="logo">
+      <a href="#inicio" class="logo" aria-label="MRS Vidros - início">
         <svg class="logo-mark" width="34" height="34" aria-hidden="true"><use href="#mrs-mark"/></svg>
         <span class="logo-text">
           <span class="logo-main">MRS <span class="logo-strong">VIDROS</span></span>
           <span class="logo-sub">Soluções em vidros e esquadrias</span>
         </span>
       </a>
+<nav aria-label="Navegação principal">
       <ul class="nav-links">
         <li><a href="#inicio">Início</a></li>
-        <li><a href="#escolha">Escolha por foto</a></li>
-        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#vidros">Vidros</a></li>
+        <li><a href="#esquadrias">Esquadrias</a></li>
+        <li><a href="#galeria">Galeria</a></li>
         <li><a href="#empresa">Empresa</a></li>
         <li><a href="#faq">Dúvidas</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
-      <button type="button" class="btn btn-primary btn-sm nav-cta" data-open-assistant>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
-        Fale com a gente
-      </button>
-      <button class="menu-btn glass" id="menuBtn" aria-label="Abrir menu">
+</nav>
+      <a href="https://wa.me/5511981303415" target="_blank" rel="noopener" class="btn btn-ghost btn-halo btn-sm nav-cta" data-wa-direct aria-label="Falar direto no WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5Zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5Zm5.2-6.7c-.3-.1-1.7-.8-1.9-.9s-.4-.2-.6.1-.7.9-.9 1.1-.3.1-.6 0a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6l-.9-2c-.2-.5-.5-.5-.7-.5H8a1.2 1.2 0 0 0-.9.4A3.7 3.7 0 0 0 6 10.2a6.5 6.5 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 4.9 6.5 6.5 0 0 0 3 .6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.7-.4Z"/></svg>
+        Falar direto
+      </a>
+      <button
+  class="menu-btn glass"
+  id="menuBtn"
+  aria-label="Abrir menu"
+  aria-controls="drawer"
+  aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
@@ -78,26 +122,54 @@
       </button>
     </div>
     <nav>
-      <a href="#inicio"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Início</a>
-      <a href="#escolha"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 15l-5-5-8 8"/></svg>Escolha por foto</a>
-      <a href="#produtos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Produtos</a>
-      <a href="#empresa"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>Empresa</a>
-      <a href="#faq"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5M12 17h.01"/></svg>Dúvidas frequentes</a>
-      <a href="#contato"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Contato</a>
+      <a href="#inicio">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+        Início
+      </a>
+      <a href="#vidros">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 11h18"/><path d="M12 4v14"/></svg>
+        Vidros
+      </a>
+      <a href="#esquadrias">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M4 12h16"/><path d="M12 3v18"/></svg>
+        Esquadrias de Alumínio
+      </a>
+      <a href="#galeria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 15l-5-5-8 8"/></svg>
+        Galeria
+      </a>
+      <a href="#empresa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+        Empresa
+      </a>
+      <a href="#faq">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7"/><path d="M12 17h.01"/></svg>
+        Dúvidas frequentes
+      </a>
+      <a href="contato.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg>
+        Contato
+      </a>
+      <a href="https://wa.me/5511981303415" target="_blank" rel="noopener" data-wa-direct class="drawer-cta">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5Zm-3.3 12.7c-.3.8-1.7 1.5-2.4 1.5a5.8 5.8 0 0 1-2.7-.6 14 14 0 0 1-5.4-4.8 6.2 6.2 0 0 1-1.3-3.3 3.5 3.5 0 0 1 1.1-2.6 1.2 1.2 0 0 1 .8-.4h.6c.2 0 .5 0 .7.5s.9 2.1.9 2.3 0 .3 0 .5-.2.3-.4.5-.6.7-.7.9 0 .5.1.6a8.8 8.8 0 0 0 1.7 2.1 8 8 0 0 0 2.4 1.5c.3.2.5.1.7-.1s.8-.9 1-1.2.4-.3.7-.2 1.8.8 2.1 1 .5.3.6.4.1.7-.2 1.4Z"/></svg>
+        Falar direto no WhatsApp
+      </a>
     </nav>
-    <div class="drawer-foot">Vidros, espelhos e esquadrias sob medida.</div>
+    <div class="drawer-foot">Seg a Sáb • 8h às 18h</div>
   </aside>
 
   <main>
-    <!-- HERO — fullbleed impactante -->
+    <!-- HERO -->
     <section id="inicio" class="hero-fs">
       <div class="hero-bg">
-        <img src="imagens/hero.jpg" alt="Fachada em vidro MRS Vidros" />
+        <img src="imagens/hero.jpg" alt="Fachada em vidro MRS Vidros" fetchpriority="high"
+ loading="eager" />
+
         <div class="hero-scrim"></div>
         <div class="hero-glow"></div>
       </div>
       <div class="container hero-content">
-        <span class="tag reveal"><span class="diamond">◆</span>MRS Vidros seu projeto realizado </span>
+        <span class="tag reveal"><span class="diamond">◆</span>MRS Vidros — Seus projetos realizados com sucesso</span>
         <h1 class="reveal">
           O vidro que <span class="gradient-text">transforma</span><br/>
           o seu ambiente.
@@ -107,44 +179,55 @@
           Medida certa, corte preciso e instalação feita por quem entende do ofício.
         </p>
         <div class="cta-row reveal">
-          <a href="#escolha" class="btn btn-primary btn-halo">
+          <a href="#vidros" class="btn btn-primary btn-halo">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 15l-5-5-8 8"/></svg>
-            Escolher pela foto
+            Ver produtos
           </a>
           <button type="button" class="btn btn-ghost btn-halo" data-open-assistant>Falar com o assistente</button>
         </div>
-        <div class="hero-scroll">
-          <span></span>
-        </div>
+        <div class="hero-scroll"><span></span></div>
       </div>
     </section>
 
-    <!-- ESCOLHA POR FOTO -->
-    <section id="escolha" class="section">
+    <!-- VIDROS -->
+    <section id="vidros" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <span class="tag"><span class="diamond">◆</span>Escolha por foto</span>
-          <h2>Veja e <span class="gradient-text">escolha</span> o modelo</h2>
-          <p>Clique no tipo de produto, veja as fotos dos modelos e escolha o seu. O assistente abre em seguida para preencher os dados e enviar direto no WhatsApp.</p>
+          <span class="tag"><span class="diamond">◆</span>Categoria • Vidros</span>
+          <h2>Vidros feitos sob <span class="gradient-text">medida</span></h2>
+          <p>Cada produto com sua galeria. Clique numa foto para ampliar ou peça o orçamento direto.</p>
         </div>
-        <div class="cat-grid" id="catGrid"></div>
+        <div class="cat-grid" id="vidrosGrid"></div>
       </div>
     </section>
 
-    <!-- PRODUTOS -->
-    <section id="produtos" class="section">
+    <!-- ESQUADRIAS -->
+    <section id="esquadrias" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
-          <span class="tag"><span class="diamond">◆</span>Produtos</span>
-          <h2>Feitos sob <span class="gradient-text">medida</span></h2>
-          <p>Cada produto com sua galeria. Peça o orçamento direto pelo formulário certo.</p>
+          <span class="tag"><span class="diamond">◆</span>Categoria • Esquadrias de Alumínio</span>
+          <h2>Esquadrias em <span class="gradient-text">alumínio</span></h2>
+          <p>Portas, janelas e abrigo para pia. Perfis reforçados, acabamento cuidadoso e boa vedação.</p>
         </div>
-        <div class="products" id="productGrid"></div>
+        <div class="cat-grid" id="esquadriasGrid"></div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag"><span class="diamond">◆</span>Galeria</span>
+          <h2>Nossos <span class="gradient-text">projetos</span></h2>
+          <p>Filtre por categoria. Toque em qualquer imagem para abrir em tela cheia, com zoom e navegação por swipe.</p>
+        </div>
+        <div class="filter-bar" id="filterBar"></div>
+        <div class="gallery-grid" id="galleryGrid"></div>
       </div>
     </section>
 
     <!-- EMPRESA -->
-    <section id="empresa" class="section">
+    <section id="empresa" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
           <span class="tag"><span class="diamond">◆</span>A Empresa</span>
@@ -163,7 +246,7 @@
           <div class="about-card glass reveal">
             <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.2 13.5L7 22l5-3 5 3-1.2-8.5"/></svg></div>
             <h3>Acabamento cuidadoso</h3>
-            <p>Corte preciso, lapidação bem feita e ajuste fino no local..</p>
+            <p>Corte preciso, lapidação bem feita e ajuste fino no local. Sem sobras, sem improviso.</p>
           </div>
           <div class="about-card glass reveal">
             <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg></div>
@@ -174,8 +257,46 @@
       </div>
     </section>
 
+    <!-- CENTRAL DE ATENDIMENTO -->
+    <section id="central" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag"><span class="diamond">◆</span>Central de Atendimento</span>
+          <h2>Fale com a 
+<span class="gradient-text">MRS Vidros</span></h2>
+          <p>Escolha o canal que preferir. Respondemos rápido em todos eles.</p>
+        </div>
+        <div class="channels-grid">
+          <a href="https://wa.me/5511981303415" target="_blank" rel="noopener" class="channel-card glass reveal" data-wa-direct>
+            <div class="channel-ic wa"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5Zm-3.3 12.7c-.3.8-1.7 1.5-2.4 1.5a5.8 5.8 0 0 1-2.7-.6 14 14 0 0 1-5.4-4.8 6.2 6.2 0 0 1-1.3-3.3 3.5 3.5 0 0 1 1.1-2.6 1.2 1.2 0 0 1 .8-.4h.6c.2 0 .5 0 .7.5s.9 2.1.9 2.3 0 .3 0 .5-.2.3-.4.5-.6.7-.7.9 0 .5.1.6a8.8 8.8 0 0 0 1.7 2.1 8 8 0 0 0 2.4 1.5c.3.2.5.1.7-.1s.8-.9 1-1.2.4-.3.7-.2 1.8.8 2.1 1 .5.3.6.4.1.7-.2 1.4Z"/></svg></div>
+            <h4>WhatsApp</h4>
+            <p>(11) 98130-3415</p>
+            <span class="channel-cta">Conversar agora →</span>
+          </a>
+          <a href="tel:+5511981303415" class="channel-card glass reveal">
+            <div class="channel-ic ph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 20 20 0 0 1-8.6-3 20 20 0 0 1-6-6 20 20 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4 13 13 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></div>
+            <h4>Telefone</h4>
+            <p>(11) 98130-3415</p>
+            <span class="channel-cta">Ligar agora →</span>
+          </a>
+          <a href="https://www.instagram.com/vidracariamrsvidros/" target="_blank" rel="noopener" class="channel-card glass reveal">
+            <div class="channel-ic ig"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+            <h4>Instagram</h4>
+            <p>@vidracariamrsvidros</p>
+            <span class="channel-cta">Visitar perfil →</span>
+          </a>
+          <a href="mailto:" data-email-link class="channel-card glass reveal">
+            <div class="channel-ic em"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <h4>E-mail</h4>
+            <p data-email-text>—</p>
+            <span class="channel-cta">Enviar mensagem →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
-    <section id="faq" class="section">
+    <section id="faq" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
           <span class="tag"><span class="diamond">◆</span>Dúvidas frequentes</span>
@@ -186,25 +307,17 @@
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="tag"><span class="diamond">◆</span>Contato</span>
-          <h2>Fale com a <span class="gradient-text">MRS Vidros</span></h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card glass reveal">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 20 20 0 0 1-8.6-3 20 20 0 0 1-6-6 20 20 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4 13 13 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></div>
-            <h4>WhatsApp</h4><p>(11) 98130-3415</p>
-          </div>
-          <div class="contact-card glass reveal">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-            <h4>Atendimento</h4><p>São Paulo e Grande SP</p>
-          </div>
-          <div class="contact-card glass reveal">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h4>Horário</h4><p>Seg a Sáb • 8h às 18h</p>
+    <!-- CTA FINAL -->
+    <section class="section cta-section">
+      <div class="container narrow">
+        <div class="cta-card glass reveal">
+          <h2>Pronto para começar seu <span class="gradient-text">projeto</span>?</h2>
+          <p>Solicite um orçamento personalizado ou fale com um especialista agora mesmo.</p>
+          <div class="cta-row hero-buttons">
+           <button type="button" class="btn btn-primary btn-halo" data-open-assistant>
+    Solicitar orçamento
+</button>
+            <a href="https://wa.me/5511981303415" target="_blank" rel="noopener" class="btn btn-ghost btn-halo" data-wa-direct>Falar direto no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -222,28 +335,35 @@
                 <span class="logo-sub">Soluções em vidros e esquadrias</span>
               </span>
             </div>
-            <p style="max-width:380px">Vidros, espelhos e esquadrias em alumínio sob medida. Projetos residenciais e comerciais.</p>
+            <p style="max-width:380px">Vidros, espelhos e esquadrias em alumínio sob medida. Projetos residenciais e comerciais em São Paulo e Grande SP.</p>
           </div>
           <div>
-            <h5>Produtos</h5>
+            <h5>Vidros</h5>
             <ul>
-              <li><a href="#produtos">Box</a></li>
-              <li><a href="#produtos">Espelhos</a></li>
-              <li><a href="#produtos">Guarda-corpo</a></li>
-              <li><a href="#produtos">Janelas</a></li>
-              <li><a href="#produtos">Portas</a></li>
-              <li><a href="#produtos">Sacadas</a></li>
-              <li><a href="#produtos">Abrigo para pia</a></li>
+              <li><a href="#vidros">Box para Banheiro</a></li>
+              <li><a href="#vidros">Espelhos</a></li>
+              <li><a href="#vidros">Guarda-corpo</a></li>
+              <li><a href="#vidros">Fachadas</a></li>
+              <li><a href="#vidros">Sacadas</a></li>
+              <li><a href="#vidros">Coberturas</a></li>
+              <li><a href="#vidros">Divisórias</a></li>
             </ul>
           </div>
           <div>
-            <h5>Institucional</h5>
+            <h5>Esquadrias</h5>
             <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#escolha">Escolha por foto</a></li>
-              <li><a href="#empresa">Empresa</a></li>
-              <li><a href="#faq">Dúvidas</a></li>
-              <li><a href="#contato">Contato</a></li>
+              <li><a href="#esquadrias">Janelas</a></li>
+              <li><a href="#esquadrias">Portas</a></li>
+              <li><a href="#esquadrias">Abrigo para pia</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Contato</h5>
+            <ul>
+              <li><a href="contato.html">Página de contato</a></li>
+              <li><a href="https://wa.me/5511981303415" target="_blank" rel="noopener" data-wa-direct>WhatsApp</a></li>
+              <li><a href="https://www.instagram.com/vidracariamrsvidros/" target="_blank" rel="noopener">Instagram</a></li>
+              <li>Seg a Sáb • 8h às 18h</li>
             </ul>
           </div>
         </div>
@@ -255,15 +375,37 @@
     </footer>
   </main>
 
-  <!-- Floating glass Assistant -->
+  <!-- FAB WhatsApp direto -->
+  <a href="https://wa.me/5511981303415" target="_blank" rel="noopener" class="fab-wa" data-wa-direct aria-label="Falar direto no WhatsApp">
+<span class="fab-ring"></span>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5Zm-3.3 12.7c-.3.8-1.7 1.5-2.4 1.5a5.8 5.8 0 0 1-2.7-.6 14 14 0 0 1-5.4-4.8 6.2 6.2 0 0 1-1.3-3.3 3.5 3.5 0 0 1 1.1-2.6 1.2 1.2 0 0 1 .8-.4h.6c.2 0 .5 0 .7.5s.9 2.1.9 2.3 0 .3 0 .5-.2.3-.4.5-.6.7-.7.9 0 .5.1.6a8.8 8.8 0 0 0 1.7 2.1 8 8 0 0 0 2.4 1.5c.3.2.5.1.7-.1s.8-.9 1-1.2.4-.3.7-.2 1.8.8 2.1 1 .5.3.6.4.1.7-.2 1.4Z"/></svg>
+  </a>
+
+  <!-- FAB Assistente -->
   <button class="fab-glass" id="fabAssistant" aria-label="Abrir assistente">
     <span class="fab-ring"></span>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
   </button>
 
   <button class="to-top" id="toTop" aria-label="Voltar ao topo">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
+
+  <!-- MOBILE BOTTOM BAR -->
+  <nav class="mobile-bar glass" id="mobileBar" aria-label="Navegação rápida">
+    <a href="#inicio">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      <span>Início</span>
+    </a>
+    <a href="#vidros">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span>Produtos</span>
+    </a>
+    <a href="https://wa.me/5511981303415" target="_blank" rel="noopener" data-wa-direct class="mobile-bar-wa">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5Zm-3.3 12.7c-.3.8-1.7 1.5-2.4 1.5a5.8 5.8 0 0 1-2.7-.6 14 14 0 0 1-5.4-4.8 6.2 6.2 0 0 1-1.3-3.3 3.5 3.5 0 0 1 1.1-2.6 1.2 1.2 0 0 1 .8-.4h.6c.2 0 .5 0 .7.5s.9 2.1.9 2.3 0 .3 0 .5-.2.3-.4.5-.6.7-.7.9 0 .5.1.6a8.8 8.8 0 0 0 1.7 2.1 8 8 0 0 0 2.4 1.5c.3.2.5.1.7-.1s.8-.9 1-1.2.4-.3.7-.2 1.8.8 2.1 1 .5.3.6.4.1.7-.2 1.4Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </nav>
 
   <!-- ASSISTANT WIDGET -->
   <div class="assistant" id="assistant" aria-hidden="true">
@@ -282,10 +424,14 @@
     <div class="assistant-body" id="assistantBody"></div>
   </div>
 
-  <!-- PICKER MODAL (escolha por foto) -->
+  <!-- PICKER MODAL -->
   <div class="modal" id="pickerModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-picker></div>
-    <div class="modal-card glass" role="dialog" aria-modal="true">
+    <div
+  class="modal-card glass"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="pickerTitle">
       <div class="modal-head">
         <div>
           <span class="tag"><span class="diamond">◆</span><span id="pickerTag">Escolha o modelo</span></span>
@@ -302,7 +448,11 @@
   <!-- BRIEFING MODAL -->
   <div class="modal" id="briefingModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card glass" role="dialog" aria-modal="true">
+    <div
+  class="modal-card glass"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="briefingTitle">
       <div class="modal-head">
         <div>
           <span class="tag"><span class="diamond">◆</span><span id="briefingTag">Orçamento</span></span>
@@ -314,6 +464,23 @@
       </div>
       <form id="briefingForm" class="briefing-form"></form>
     </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" data-lb-close aria-label="Fechar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button class="lb-arrow prev" data-lb-prev aria-label="Anterior">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lb-arrow next" data-lb-next aria-label="Próxima">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <div class="lb-stage" id="lbStage">
+      <img id="lbImg" alt="" />
+    </div>
+    <div class="lb-caption" id="lbCaption"></div>
   </div>
 
   <script src="script.js"></script>
