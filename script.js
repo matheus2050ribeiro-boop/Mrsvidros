@@ -460,7 +460,7 @@ const open = () => {
     setTimeout(() => bubble("Sou o assistente da MRS Vidros. Como posso ajudar?"), 350);
     setTimeout(() => {
       chips([
-        { label: "🪟 Ver produtos e orçamento", value: "produtos" },
+        { label: "🪟 Ver produtos", value: "produtos" },
         { label: "💬 Falar diretamente com a MRS Vidros", value: "humano", human: true },
         { label: "📍 Onde atendemos", value: "area" },
         { label: "🕐 Horário de atendimento", value: "horario" },
