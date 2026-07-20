@@ -28,14 +28,14 @@ const VIDROS = [
     desc: "Guarda-corpos em vidro para escadas, sacadas e mezaninos.",
     features: ["Fixação com torre, botão ou perfil", "Vidro temperado ou laminado", "Instalação limpa e alinhada"],
     images: ["imagens/guarda-1.jpg","imagens/guarda-2.jpg","imagens/guarda-3.jpg"] },
-  { id: "fachadas",  tag: "Fachadas",      title: "Fachadas de Vidro",
-    desc: "Fachadas comerciais em vidro temperado com estrutura discreta.",
-    features: ["Vidro temperado 10mm", "Estrutura em spider ou perfil", "Aplicação em lojas e escritórios"],
-    images: ["imagens/hero.jpg","imagens/guarda-1.jpg","imagens/sacada-1.jpg"] },
   { id: "sacadas",   tag: "Sacadas",       title: "Envidraçamento de Sacada",
     desc: "Sistema deslizante que integra o ambiente à vista externa.",
     features: ["Panorâmico, sem colunas centrais", "Vidro temperado 8 ou 10 mm", "Trilhos com boa vedação"],
     images: ["imagens/sacada-1.jpg","imagens/sacada-2.jpg","imagens/sacada-3.jpg"] },
+  { id: "fachadas",  tag: "Fachadas",      title: "Fachadas de Vidro",
+    desc: "Fachadas comerciais em vidro temperado com estrutura discreta.",
+    features: ["Vidro temperado 10mm", "Estrutura em spider ou perfil", "Aplicação em lojas e escritórios"],
+    images: ["imagens/hero.jpg","imagens/guarda-1.jpg","imagens/sacada-1.jpg"] },
   { id: "coberturas",tag: "Coberturas",    title: "Coberturas de Vidro",
     desc: "Coberturas para áreas externas, jardins de inverno e passagens.",
     features: ["Vidro laminado de segurança", "Estrutura em alumínio ou aço", "Acabamento com calha e escoamento"],
@@ -159,16 +159,26 @@ const svgArrow = (dir) => dir === "left"
   : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
 
 /* ---------- Card render (categoria) ---------- */
+const SERVICE_SEO = {
+  box: { slug: "box-para-banheiro" },
+  espelhos: { slug: "espelhos" },
+  guarda: { slug: "guarda-corpo-de-vidro" },
+  sacadas: { slug: "envidracamento-de-sacadas" },
+};
+
 function catCard(p) {
-  return `<button type="button" class="cat-card reveal" data-cat="${p.id}" data-cat-filter="${p.id}">
+  const seo = SERVICE_SEO[p.id];
+  const saiba = seo ? `${' '}<a href="${seo.slug}.html" class="cat-cta" style="color:var(--primary)" onclick="event.stopPropagation()">Saiba mais <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>` : '';
+  return `<div class="cat-card reveal" data-cat="${p.id}" data-cat-filter="${p.id}" role="button" tabindex="0">
     <div class="cat-img"><img src="${p.images[0]}" alt="${p.title}" loading="lazy"/></div>
     <div class="cat-info">
       <span class="cat-tag">${p.tag}</span>
       <span class="cat-title">${p.title}</span>
       <span class="cat-desc">${p.desc}</span>
+      ${saiba}
       <span class="cat-cta">Ver modelos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </div>
-  </button>`;
+  </div>`;
 }
 
 function renderCategories() {
